@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+    <div class="card container">
+        <div class="card-body">
+            <div class="text-center">
+              <h1><%= book.title %></h1>
+              <p><%= book.author %></p>
+            </div>
+            <div class="container">
+                <p>The current book price is $<%= book.price %></p>
+                <p>Book added on <%= book.created.toDateString() %></p>
+
+            </div>
+            <div class="card-body">
+                <span><%- book.description %></span>
+            </div>
+            <a class="btn btn-outline-warning" href="/index/<%= book._id %>/edit">Edit</a>
+            <form class="delete" action="/index/<%= book._id %>?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-outline-danger">Delete</button>
+            </form>
+            <a class="btn btn-outline-dark" href="/index" class="card-link">Back</a>            
+        </div>
+    </div>
+<% include ./partials/footer %>
+

@@ -1,0 +1,13 @@
+<% include ./partials/header %>
+<div class="container">
+    <h1>The books collection</h1>
+    <% books.forEach(function(book){ %>
+        <div>
+            <h4><%= book.title %></h4>
+            <p><%= book.author %></p>
+            <!--<span><%= book.created.toDateString() %></span>-->
+            <a href="/index/<%= book._id %>">Read More</a>
+        </div>
+    <% }); %>
+</div>
+<% include ./partials/footer %>

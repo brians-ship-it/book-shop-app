@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+    <div class="card container">
+      <div class="card-body">
+        <h1>New Book</h1>
+    </div>
+    <form action='/index' method='POST'>
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="book[title]" placeholder="Title">
+        </div> 
+        <div class="form-group">
+            <div >
+                <label>Author</label>
+                <input type="text" class="form-control" name="book[author]" placeholder="Author">
+            </div>
+            <div>
+                <label>Price</label>
+                <input type="number" class="form-control" name="book[price]" placeholder="Price" min="0.01" step="0.01">
+            </div>
+            <div>
+                <label>Pages</label>
+                <input type="number" class="form-control" name="book[pages]" placeholder="Pages">
+            </div>
+        </div> 
+        <div class="form-group">
+        <label>About</label>
+            <textarea class="form-control" name="book[description]"></textarea>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+<% include ./partials/footer %>
