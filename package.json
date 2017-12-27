@@ -10,9 +10,6 @@
     "method-override": "^2.3.10",
     "mongoose": "^4.13.7"
   },
-  "devDependencies": {
-    "nodemon": "^1.12.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
